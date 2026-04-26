@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Problem Log</title>
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div class="nav__toggle" id="nav-toggle" aria-label="Open navigation" role="button" tabindex="0">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <div>
+                <a href="index.html" class="nav__logo">Abdul Rafay</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#top" class="nav__link active-link">Problem Log</a></li>
+                </ul>
+                <div class="nav__menu-actions">
+                    <a href="admin.html" class="button button--outline nav__admin-button">Admin Panel</a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <div class="nav__overlay" id="nav-overlay" aria-hidden="true"></div>
+
+    <main class="l-main page-shell" id="top">
+        <section class="page-hero bd-grid">
+            <span class="page-hero__eyebrow">Private scratchpad</span>
+            <h1 class="page-hero__title">Problem Log</h1>
+            <p class="page-hero__text">
+                Add a problem, write what you tried, and record the solution that finally worked.
+                This version saves in your browser so it runs as a simple static page.
+            </p>
+            <div class="page-actions">
+                <a href="index.html" class="button button--outline">Back to Home</a>
+                <button type="button" id="log-clear" class="button">Clear All</button>
+            </div>
+        </section>
+
+        <section class="log-layout bd-grid">
+            <div class="log-panel">
+                <h2>Add Entry</h2>
+                <form id="log-form" class="log-form">
+                    <div class="log-form__grid">
+                        <label class="log-form__field">
+                            <span>Type</span>
+                            <select name="type" required>
+                                <option value="Problem">Problem</option>
+                                <option value="Discovery">Discovery</option>
+                                <option value="Blog Idea">Blog Idea</option>
+                                <option value="Note">Note</option>
+                            </select>
+                        </label>
+
+                        <label class="log-form__field">
+                            <span>Tags</span>
+                            <input type="text" name="tags" placeholder="frontend, css, api">
+                        </label>
+
+                        <label class="log-form__field log-form__field--full">
+                            <span>Problem Title</span>
+                            <input type="text" name="problem" placeholder="Navigation menu not opening on mobile" required>
+                        </label>
+
+                        <label class="log-form__field log-form__field--full">
+                            <span>What happened</span>
+                            <textarea name="details" placeholder="Describe the issue, symptoms, and anything important you tried." required></textarea>
+                        </label>
+
+                        <label class="log-form__field log-form__field--full">
+                            <span>Solution</span>
+                            <textarea name="solution" placeholder="Add the fix or leave this blank until you solve it."></textarea>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="button">Save Entry</button>
+                    <p class="log-note">Everything stays in this browser unless you later connect it to a backend or database.</p>
+                </form>
+            </div>
+
+            <div class="log-panel">
+                <h2>Saved Entries</h2>
+                <div id="log-empty" class="log-empty">No entries yet. Add your first one on the left.</div>
+                <div id="log-list" class="log-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__title">Abdul Rafay</p>
+        <p class="footer__copy">Problem log runs locally in the browser.</p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

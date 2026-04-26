@@ -15,6 +15,10 @@
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
+                <div class="nav__toggle" id="nav-toggle" aria-label="Open navigation" role="button" tabindex="0">
+                    <i class='bx bx-menu'></i>
+                </div>
+
                 <div>
                     <a href="#" class="nav__logo">Abdul Rafay</a>
                 </div>
@@ -27,13 +31,14 @@
                         <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
+                    <div class="nav__menu-actions">
+                        <a href="admin.html" class="button button--outline nav__admin-button">Admin Panel</a>
+                    </div>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
             </nav>
         </header>
+        <div class="nav__overlay" id="nav-overlay" aria-hidden="true"></div>
 
         <main class="l-main">
             <!--===== HOME =====-->
@@ -41,7 +46,10 @@
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Abdul Rafay</span><br>Full Stack Developer</h1>
 
-                    <a href="#" class="button">Contact</a>
+                    <div class="home__cta">
+                        <a href="#contact" class="button">Contact</a>
+                        <a href="errors.html" class="button button--outline">Problem Log</a>
+                    </div>
                 </div>
 
                 <div class="home__social">

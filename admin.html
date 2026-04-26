@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Admin Authentication</title>
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div class="nav__toggle" id="nav-toggle" aria-label="Open navigation" role="button" tabindex="0">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <div>
+                <a href="index.html" class="nav__logo">Abdul Rafay</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="errors.html#top" class="nav__link">Problem Log</a></li>
+                    <li class="nav__item"><a href="#top" class="nav__link active-link">Admin Auth</a></li>
+                </ul>
+                <div class="nav__menu-actions">
+                    <a href="admin.html" class="button nav__admin-button active-link">Admin Panel</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="nav__overlay" id="nav-overlay" aria-hidden="true"></div>
+
+    <main class="l-main" id="top">
+        <section class="admin-shell bd-grid">
+            <div class="admin-card">
+                <h1>Admin Authentication</h1>
+                <p>Sign in to access admin mode for this portfolio project.</p>
+
+                <form id="admin-auth-form" class="admin-form" autocomplete="off">
+                    <input class="admin-input" type="text" name="username" placeholder="Username" required>
+                    <input class="admin-input" type="password" name="password" placeholder="Password" required>
+                    <button type="submit" class="button">Authenticate</button>
+                </form>
+
+                <div id="admin-auth-message" class="admin-message"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__title">Abdul Rafay</p>
+        <p class="footer__copy">Admin page is client-side only for demo use.</p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
